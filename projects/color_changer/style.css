@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.h2{
+    padding: 53px;
+    color: white;
+}
+.button{
+    background: white;
+    margin: 22px;
+    padding: 56px;
+   
+
+}
+#yellow{
+    background: yellow;
+
+}
+#red{
+    background: red;
+
+}
+#green{
+    background: green;
+
+}
+#blue{
+    background: blue;
+
+}
