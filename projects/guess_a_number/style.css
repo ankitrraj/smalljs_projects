@@ -1,0 +1,97 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+#cont {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Header Section */
+.under {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Heyh {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+#guess {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#guessfield {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: white;
+    font-size: 16px;
+}
+
+#subt {
+    padding: 10px;
+    background: #0dbb4f;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+#subt:hover {
+    background: #0a9d42;
+}
+
+/* Results Section */
+.resultpars {
+    margin-top: 20px;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.resultpars p {
+    margin-bottom: 6px;
+}
+
+.low {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
