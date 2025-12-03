@@ -1,23 +1,25 @@
 let randomnum= parseInt(Math.random()*100 +1) /// when this you used tofixed in this place its return a string so comparison faills
-console.log(randomnum);
+console.log(randomnum); //genrate a number 1 to 100
 
 
-const userinput = document.querySelector('#guessfield')
-const submit = document.querySelector('#subt')
-const pregusses = document.querySelector('.gusses')
-const remaingusses = document.querySelector('.gussesremain')
-const lowORhigh = document.querySelector('.lowORhigh')
-const resultpars = document.querySelector('.resultpars')
-const p = document.createElement('p')
+const userinput = document.querySelector('#guessfield') // type field as input
+const submit = document.querySelector('#subt')// its a only submit btn
+const pregusses = document.querySelector('.gusses')  // this the the previous gusses the user guess the number
+const remaingusses = document.querySelector('.gussesremain')// this use as token what tryes user have remain
+const lowORhigh = document.querySelector('.lowORhigh')// this is only for trick to user gusses is low or high
+const resultpars = document.querySelector('.resultpars') // result pars for the last result when we show 
+const p = document.createElement('p')// this is exttra btn element for the to start game 
 
-let previousgusses = [];
-let gussesremain =1;
+let previousgusses = [];// intalized  a array to store the user gusses
+let gussesremain =1;// how much tryes he has remain
 
- let playgame= true;
+ let playgame= true;//this is the condition when user play game or not
 
  if (playgame) {
-    submit.addEventListener('click' ,function (e){
+    submit.addEventListener('click' ,function (e){ //use submit btn and clcik
+
         e.preventDefault();  // it means value ko hold yahi rakho
+        
         const gusses = parseInt(userinput.value)
         console.log(gusses);
         validatenumber(gusses);
