@@ -90,8 +90,11 @@ p {
     margin-bottom: 6px;
 }
 
-.low {
+/* 🎯 Reserve space for Output (IMPORTANT FIX) */
+.lowORhigh {
+    display: block;
+    min-height: 24px;   /* <-- Output ke liye hamesha jagah reserved */
     font-size: 16px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 8px;
 }

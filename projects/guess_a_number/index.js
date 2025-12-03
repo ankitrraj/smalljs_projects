@@ -1,4 +1,4 @@
-const randomnum= (Math.random()*100 +1).toFixed()
+const randomnum= parseInt(Math.random()*100 +1) /// when this you used tofixed in this place its return a string so comparison faills
 console.log(randomnum);
 
 
@@ -8,6 +8,7 @@ const pregusses = document.querySelector('.gusses')
 const remaingusses = document.querySelector('.gussesremain')
 const lowORhigh = document.querySelector('.lowORhigh')
 const resultpars = document.querySelector('.resultpars')
+const p = document.createElement('p')
 
 let previousgusses = [];
 let gussesremain =1;
@@ -68,18 +69,32 @@ function validatenumber(gusses){
  function displayguess(gusses) {
 
     userinput.value =''
-    pregusses.innerHTML = `${gusses},`
+    pregusses.innerHTML += `${gusses},`
+    gussesremain++;
+    remaingusses.innerHTML =`${11-gussesremain}`
+
 
     
  }
- function displaymessage(gusses){
+ function displaymessage(message){
+    lowORhigh.innerHTML = `<h2>${message}</h2>`
+
+ }
+
+ function endgame(){
+    // userinput.value=''
+    // userinput.setAttribute('disabled','')
+    // p.classList('button')
+    // p.innerHTML = `<h2 id="newgame>start new game</h2>`
+    // resultpars.appendChild(p)
+    // endgame
 
  }
 
 
 function newgame(){
+    
+
 
 }
- function endgame(){
-
- }
+ 
