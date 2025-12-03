@@ -1,4 +1,4 @@
-const randomnum= parseInt(Math.random()*100 +1) /// when this you used tofixed in this place its return a string so comparison faills
+let randomnum= parseInt(Math.random()*100 +1) /// when this you used tofixed in this place its return a string so comparison faills
 console.log(randomnum);
 
 
@@ -34,7 +34,7 @@ function validatenumber(gusses){
     }else if(gusses >100){
         alert("enter a valid num low to 100");
     }else{
-        pregusses.append(gusses)
+        // pregusses.append(gusses)
         if(gussesremain===11){
             displayguess(gusses)
 
@@ -69,7 +69,7 @@ function validatenumber(gusses){
  function displayguess(gusses) {
 
     userinput.value =''
-    pregusses.innerHTML += `${gusses},`
+    pregusses.innerHTML += `${gusses}   ,`
     gussesremain++;
     remaingusses.innerHTML =`${11-gussesremain}`
 
@@ -81,18 +81,39 @@ function validatenumber(gusses){
 
  }
 
- function endgame(){
-    // userinput.value=''
-    // userinput.setAttribute('disabled','')
-    // p.classList('button')
-    // p.innerHTML = `<h2 id="newgame>start new game</h2>`
-    // resultpars.appendChild(p)
-    // endgame
+ function endgame() {
+    userinput.value = '';
+    userinput.setAttribute('disabled', '');
 
- }
+    const p = document.createElement('p'); // FIXED
+    p.innerHTML = `<button id="newGame">Start New Game</button>`; // FIXED
+    resultpars.appendChild(p);
+
+    playgame = false;
+    newgame(); 
+}
+
 
 
 function newgame(){
+    const newgamebtn =document.querySelector("#newGame")
+    newgamebtn.addEventListener('click',function(e){
+        randomnum= parseInt(Math.random()*100 +1)
+         previousgusses = [];
+        gussesremain =1;
+        pregusses.innerHTML=''
+        remaingusses.innerHTML =`${11-gussesremain}`
+        userinput.removeAttribute('disabled')
+        newgamebtn.parentElement.remove()
+
+
+
+
+
+
+
+        playgame=true
+    })
     
 
 
