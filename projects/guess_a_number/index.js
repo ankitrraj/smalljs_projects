@@ -85,7 +85,7 @@ function validatenumber(gusses){
     userinput.value = '';
     userinput.setAttribute('disabled', '');
 
-    const p = document.createElement('p'); // FIXED
+     // FIXED
     p.innerHTML = `<button id="newGame">Start New Game</button>`; // FIXED
     resultpars.appendChild(p);
 
